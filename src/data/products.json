@@ -1,0 +1,139 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "RoseWow Velvet Rose Lip Balm",
+      "description": "RoseWow Lip Balm is a delicate blend of soft moisture and gentle fragrance, crafted from rose petals to nourish and enhance your lips. With a smooth glide and long-lasting hydration, each balm is made to give you the color, the scent, and the softness of real roses. Whether you're treating yourself or gifting someone special, RoseWow brings beauty and care in every swipe.",
+      "features": [
+        "Subtle rose tint",
+        "Gentle rose scent",
+        "Moisturizing & lightweight",
+        "Non-sticky finish",
+        "Perfect for daily use"
+      ],
+      "tagline": "Sustainably Beautiful. Made for Your Lips.",
+      "price": 12.99,
+      "images": ["/velvet-rose-1.jpeg", "/velvet-rose-2.jpeg"],
+      "stock": 25,
+      "ingredients": "Butyrospermum Parkii (Shea) Butter, Cocos Nucifera (Coconut) Oil, Beeswax, Rosa Damascena (Rose) Flower Oil, Tocopherol (Vitamin E), Rosa Damascena (Rose) Flower Extract, Helianthus Annuus (Sunflower) Seed Oil, Natural Flavor, Mica, Iron Oxides",
+      "variants": [
+        {
+          "id": "1-1",
+          "name": "Classic Rose",
+          "color": "#FFB6C1",
+          "inStock": true
+        },
+        {
+          "id": "1-2",
+          "name": "Deep Rose",
+          "color": "#C71585",
+          "inStock": true
+        }
+      ],
+      "reviews": [
+        {
+          "id": "r1",
+          "user": "Emily S.",
+          "rating": 5,
+          "comment": "This lip balm is amazing! The scent is subtle and the moisture lasts all day.",
+          "date": "2025-03-15"
+        },
+        {
+          "id": "r2",
+          "user": "Jessica T.",
+          "rating": 4,
+          "comment": "Love the texture and how it feels on my lips. Would prefer a slightly stronger scent.",
+          "date": "2025-03-10"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "RoseWow Petal Kiss Lip Balm",
+      "description": "Petal Kiss is our signature formula with a hint of sweetness. This nourishing lip balm combines the delicate essence of rose with a touch of honey for the perfect balance of moisture and protection. The lightweight formula glides on smoothly and provides long-lasting hydration without feeling heavy or greasy.",
+      "features": [
+        "Sweet rose honey scent",
+        "Soft pink tint",
+        "Extra moisturizing formula",
+        "Smooth application",
+        "Long-lasting protection"
+      ],
+      "tagline": "The Kiss of Nature. The Touch of Luxury.",
+      "price": 14.99,
+      "images": ["/petal-kiss-1.jpeg", "/petal-kiss-2.jpeg"],
+      "stock": 18,
+      "ingredients": "Butyrospermum Parkii (Shea) Butter, Cocos Nucifera (Coconut) Oil, Beeswax, Rosa Damascena (Rose) Flower Oil, Mel (Honey) Extract, Tocopherol (Vitamin E), Rosa Damascena (Rose) Flower Extract, Helianthus Annuus (Sunflower) Seed Oil, Natural Flavor, Mica, Iron Oxides",
+      "variants": [
+        {
+          "id": "2-1",
+          "name": "Honey Rose",
+          "color": "#FADADD",
+          "inStock": true
+        },
+        {
+          "id": "2-2",
+          "name": "Blush Pink",
+          "color": "#FFC0CB",
+          "inStock": false
+        }
+      ],
+      "reviews": [
+        {
+          "id": "r3",
+          "user": "Sophia L.",
+          "rating": 5,
+          "comment": "The honey and rose combination is divine! My lips have never felt better.",
+          "date": "2025-04-02"
+        },
+        {
+          "id": "r4",
+          "user": "Olivia R.",
+          "rating": 5,
+          "comment": "This is my new favorite lip balm. The scent is perfect and it keeps my lips hydrated all day.",
+          "date": "2025-03-25"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "RoseWow Dewy Morning Lip Balm",
+      "description": "Dewy Morning captures the fresh essence of roses touched by morning dew. This revitalizing lip balm combines rose water with aloe vera for a refreshing and hydrating experience. Perfect for starting your day with a burst of natural moisture and a subtle hint of rose.",
+      "features": [
+        "Fresh rose water scent",
+        "Clear with subtle shine",
+        "Refreshing formula",
+        "Aloe vera infused",
+        "Perfect for morning routine"
+      ],
+      "tagline": "Fresh as Morning Dew. Soft as Rose Petals.",
+      "price": 13.99,
+      "images": ["/velvet-rose-1.jpeg", "/petal-kiss-2.jpeg"],
+      "stock": 22,
+      "ingredients": "Butyrospermum Parkii (Shea) Butter, Cocos Nucifera (Coconut) Oil, Beeswax, Rosa Damascena (Rose) Flower Water, Aloe Barbadensis Leaf Extract, Tocopherol (Vitamin E), Helianthus Annuus (Sunflower) Seed Oil, Natural Flavor",
+      "variants": [
+        {
+          "id": "3-1",
+          "name": "Morning Dew",
+          "color": "#F0F8FF",
+          "inStock": true
+        },
+        {
+          "id": "3-2",
+          "name": "Sunrise Glow",
+          "color": "#FFE4E1",
+          "inStock": true
+        }
+      ],
+      "reviews": [
+        {
+          "id": "r5",
+          "user": "Hannah M.",
+          "rating": 4,
+          "comment": "So refreshing! I love using this in the morning as part of my routine.",
+          "date": "2025-04-10"
+        }
+      ]
+    }
+  ],
+  "orders": []
+}
