@@ -28,7 +28,7 @@ export default function Home() {
                 scale: Math.random() * 0.5 + 0.5
               }}
               animate={{
-                y: window.innerHeight + 100,
+                y: '100vh',
                 x: Math.sin(i) * 200 + (Math.random() * 200 - 100),
                 rotate: Math.random() * 360
               }}
