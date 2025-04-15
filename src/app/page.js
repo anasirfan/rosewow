@@ -14,8 +14,42 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="hero-gradient py-16 md:py-24">
-        <div className="container mx-auto px-4">
+      <section className="hero-gradient py-16 md:py-24 overflow-hidden relative">
+        {/* Floating rose petals background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {[...Array(12)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute opacity-30"
+              initial={{
+                x: Math.random() * 100 - 50,
+                y: Math.random() * -100,
+                rotate: Math.random() * 360,
+                scale: Math.random() * 0.5 + 0.5
+              }}
+              animate={{
+                y: window.innerHeight + 100,
+                x: Math.sin(i) * 200 + (Math.random() * 200 - 100),
+                rotate: Math.random() * 360
+              }}
+              transition={{
+                duration: Math.random() * 20 + 15,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+              style={{
+                left: `${Math.random() * 100}%`,
+                width: `${Math.random() * 30 + 10}px`,
+                height: `${Math.random() * 30 + 10}px`,
+                background: `rgba(219, 112, 147, ${Math.random() * 0.2 + 0.1})`,
+                borderRadius: '50% 50% 50% 0',
+                boxShadow: '0 0 10px rgba(219, 112, 147, 0.3)'
+              }}
+            />
+          ))}
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col md:flex-row items-center">
             <motion.div 
               initial={{ opacity: 0, x: -50 }}
@@ -23,28 +57,111 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="md:w-1/2 mb-10 md:mb-0"
             >
-              <h1 className="text-4xl md:text-5xl font-bold text-rose-700 mb-4">
-                Beauty in Every Swipe
-              </h1>
-              <p className="text-lg text-gray-700 mb-8">
+              <motion.h1 
+                className="text-4xl md:text-5xl font-bold text-rose-700 mb-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <motion.span 
+                  className="inline-block"
+                  whileHover={{ scale: 1.05, color: "#be185d" }}
+                >
+                  Beauty
+                </motion.span>{" "}
+                <motion.span 
+                  className="inline-block"
+                  whileHover={{ scale: 1.05, color: "#be185d" }}
+                >
+                  in
+                </motion.span>{" "}
+                <motion.span 
+                  className="inline-block"
+                  whileHover={{ scale: 1.05, color: "#be185d" }}
+                >
+                  Every
+                </motion.span>{" "}
+                <motion.span 
+                  className="inline-block"
+                  whileHover={{ scale: 1.05, color: "#be185d" }}
+                >
+                  Swipe
+                </motion.span>
+              </motion.h1>
+              
+              <motion.p 
+                className="text-lg text-gray-700 mb-8"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
                 Experience the delicate blend of soft moisture and gentle fragrance, 
                 crafted from rose petals to nourish and enhance your lips.
-              </p>
-              <Link 
-                href="/products" 
-                className="btn-primary px-8 py-3 rounded-full inline-flex items-center font-medium text-base"
+              </motion.p>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Shop Now
-                <FaArrowRight className="ml-2" />
-              </Link>
+                <Link 
+                  href="/products" 
+                  className="btn-primary px-8 py-3 rounded-full inline-flex items-center font-medium text-base group"
+                >
+                  <span className="mr-2">Explore Collection</span>
+                  <motion.div
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ 
+                      duration: 1.5, 
+                      repeat: Infinity, 
+                      repeatType: "loop" 
+                    }}
+                  >
+                    <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                  </motion.div>
+                </Link>
+              </motion.div>
             </motion.div>
+            
             <motion.div 
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="md:w-1/2"
+              className="md:w-1/2 relative"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
-              <div className="relative h-80 md:h-96 w-full">
+              <motion.div 
+                className="absolute -top-4 -left-4 w-24 h-24 bg-rose-100 rounded-full z-0 opacity-70"
+                animate={{ 
+                  scale: [1, 1.2, 1],
+                  rotate: [0, 10, 0],
+                  opacity: [0.7, 0.5, 0.7]
+                }}
+                transition={{ 
+                  duration: 5, 
+                  repeat: Infinity,
+                  repeatType: "reverse" 
+                }}
+              />
+              
+              <motion.div 
+                className="absolute -bottom-6 -right-6 w-32 h-32 bg-rose-200 rounded-full z-0 opacity-60"
+                animate={{ 
+                  scale: [1, 1.1, 1],
+                  rotate: [0, -10, 0],
+                  opacity: [0.6, 0.4, 0.6]
+                }}
+                transition={{ 
+                  duration: 7, 
+                  repeat: Infinity,
+                  repeatType: "reverse" 
+                }}
+              />
+              
+              <div className="relative h-80 md:h-96 w-full z-10">
                 <Image 
                   src="/velvet-rose-1.jpeg" 
                   alt="RoseWow Lip Balm" 

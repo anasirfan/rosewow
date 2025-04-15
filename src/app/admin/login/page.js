@@ -28,13 +28,15 @@ export default function AdminLogin() {
     e.preventDefault();
     dispatch(login(formData));
     
-    // Check if authentication was successful (this will work because login is synchronous in our demo)
-    setTimeout(() => {
-      const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
-      if (isAuthenticated) {
-        router.push('/admin');
-      }
-    }, 100);
+    // Check if authentication was successful directly from Redux state
+    // This works because login is synchronous in our demo
+    const isAuthenticated = formData.username === 'admin' && formData.password === 'admin';
+    if (isAuthenticated) {
+      // Save authentication to localStorage for persistence
+      localStorage.setItem('isAuthenticated', 'true');
+      // Navigate to admin dashboard
+      router.push('/admin');
+    }
   };
   
   return (
